@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>player</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/progressbar.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body class="bg">
+		<div class="container-fluid">
+			<div id="main" class="row text-center">
+				<div id="text">
+					<label id="info">
+						一个音乐播放器<br>
+						仅支持在chrome浏览器下播放MP3格式的音乐<br>
+						为了保证完整的体验，请使用包含ID3的MP3音乐<br>
+						把音乐拖放到浏览器窗口，可批量拖放<br>
+						鼠标滚轮调整音量<br>
+					</label><br>
+				</div>
+				<div id="pic" class="center" style="display:none;">
+					<img id="albumPic" class="center revolve"  src="" />
+					<div id="littleRing" class="center"></div>
+					<div id="centerRing" class="center"></div>
+				</div>
+				
+			</div>
+		</div>
+		<div id="bottomBar">
+			<div id="progress" class="progressbar"></div>
+			<br>
+			<div id="infoBox">
+				<label id="time" >0.00 / 0.00</label>
+				<label id="fraction" >0 / 0</label>
+				<span title="列表循环" id="changeMode" class="glyphicon glyphicon-retweet"> </span>
+			</div>
+			<div id="control" class="text-center">
+				<span class="glyphicon glyphicon-backward"></span>
+				<span class="glyphicon glyphicon-pause"></span>
+				<span class="glyphicon glyphicon-forward"></span>
+			</div>
+		</div>
+		<canvas style="display:none;" id="canvas"></canvas>
+		<audio id="bar" autoplay="autoplay" src=""></audio>
+		<script src="js/event.js"></script>
+		<script src="js/array.js"></script>
+		<script src="js/progressbar.js"></script>
+		<script src="js/id3-minimized.js"></script>
+		<script src="js/StackBlur.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
